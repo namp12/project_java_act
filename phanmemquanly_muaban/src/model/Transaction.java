@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Transaction {
 	public enum Type {
 		dangnhap,
-		dãnguat
+		dangxuat
 	}
 
 	private String sanpham;
