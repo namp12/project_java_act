@@ -3,34 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/MainView.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/util/SearchUtil.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/StatisticsService.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/repository/ExcelRepository.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/repository/FileManager.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/TransactionView.java</file>
             <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/Statistics.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/util/ExportUtil.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/util/DateUtil.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/controller/ProductController.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/controller/LoginController.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/AlertService.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/util/InputValidator.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/TransactionService.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/ProductView.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/config/AppConfig.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/StatisticsView.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/user.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/repository/UserRepository.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/UserService.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/AlertView.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/controller/TransactionController.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/ProductService.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/controller/StatisticsController.java</file>
+            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/Invoice.java</file>
+            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/Supplier.java</file>
             <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/Transaction.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/repository/JsonRepository.java</file>
-            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/view/LoginView.java</file>
             <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/product.java</file>
+            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/user.java</file>
+            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/service/IService.java</file>
+            <file>file:/D:/projectcuoikhoa_java_act/phanmemquanly_muaban/src/model/Role.java</file>
         </group>
     </open-files>
 </project-private>

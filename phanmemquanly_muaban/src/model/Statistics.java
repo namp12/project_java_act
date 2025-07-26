@@ -4,37 +4,23 @@
  */
 package model;
 
+import java.util.Map;
+
 /**
  *
  * @author Phuong Nam
  */
 public class Statistics {
-     private String[] productNames;
-    private int[] quantitiesSold;
     private double totalRevenue;
-    private double totalProfit;
+    private int totalProductsSold;
+    private Map<String, Integer> productSalesCount; // productName → quantity sold
 
-    public Statistics(String[] productNames, int[] quantitiesSold, double totalRevenue, double totalProfit) {
-        this.productNames = productNames;
-        this.quantitiesSold = quantitiesSold;
+    public Statistics() {}
+
+    public Statistics(double totalRevenue, int totalProductsSold, Map<String, Integer> productSalesCount) {
         this.totalRevenue = totalRevenue;
-        this.totalProfit = totalProfit;
-    }
-
-    public String[] getProductNames() {
-        return productNames;
-    }
-
-    public void setProductNames(String[] productNames) {
-        this.productNames = productNames;
-    }
-
-    public int[] getQuantitiesSold() {
-        return quantitiesSold;
-    }
-
-    public void setQuantitiesSold(int[] quantitiesSold) {
-        this.quantitiesSold = quantitiesSold;
+        this.totalProductsSold = totalProductsSold;
+        this.productSalesCount = productSalesCount;
     }
 
     public double getTotalRevenue() {
@@ -45,24 +31,25 @@ public class Statistics {
         this.totalRevenue = totalRevenue;
     }
 
-    public double getTotalProfit() {
-        return totalProfit;
+    public int getTotalProductsSold() {
+        return totalProductsSold;
     }
 
-    public void setTotalProfit(double totalProfit) {
-        this.totalProfit = totalProfit;
+    public void setTotalProductsSold(int totalProductsSold) {
+        this.totalProductsSold = totalProductsSold;
     }
 
+    public Map<String, Integer> getProductSalesCount() {
+        return productSalesCount;
+    }
+
+    public void setProductSalesCount(Map<String, Integer> productSalesCount) {
+        this.productSalesCount = productSalesCount;
+    }
+    
+    
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Statistics{\n");
-        for (int i = 0; i < productNames.length; i++) {
-            sb.append("  ").append(productNames[i]).append(": ").append(quantitiesSold[i]).append(" units\n");
-        }
-        sb.append("  Total Revenue: ").append(totalRevenue).append("\n");
-        sb.append("  Total Profit: ").append(totalProfit).append("\n");
-        sb.append("}");
-        return sb.toString();
+        return "Doanh thu: " + totalRevenue + " | Sản phẩm bán: " + totalProductsSold;
     }
 }

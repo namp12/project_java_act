@@ -11,22 +11,25 @@ import java.time.LocalDate;
  * @author Phuong Nam
  */
 public class product {
-    private String id;
-    private String name;
-    private LocalDate NSX;
-    private LocalDate HSD;
-    private int soLuong;
-    private double gia;
-    private String nhaSanXuat;
+   private String id;
+   private String name;
+   private double price;
+   private LocalDate NSX;
+   private LocalDate HSD;
+   private int quantity;
+   private Supplier supplier;
 
-    public product(String id, String name, LocalDate NSX, LocalDate HSD, int soLuong, double gia, String nhaSanXuat) {
+    public product() {
+    }
+
+    public product(String id, String name, double price, LocalDate NSX, LocalDate HSD, int quantity, Supplier supplier) {
         this.id = id;
         this.name = name;
+        this.price = price;
         this.NSX = NSX;
         this.HSD = HSD;
-        this.soLuong = soLuong;
-        this.gia = gia;
-        this.nhaSanXuat = nhaSanXuat;
+        this.quantity = quantity;
+        this.supplier = supplier;
     }
 
     public String getId() {
@@ -45,6 +48,14 @@ public class product {
         this.name = name;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public LocalDate getNSX() {
         return NSX;
     }
@@ -61,28 +72,26 @@ public class product {
         this.HSD = HSD;
     }
 
-    public int getSoLuong() {
-        return soLuong;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setSoLuong(int soLuong) {
-        this.soLuong = soLuong;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public double getGia() {
-        return gia;
+    public Supplier getSupplier() {
+        return supplier;
     }
 
-    public void setGia(double gia) {
-        this.gia = gia;
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
     }
 
-    public String getNhaSanXuat() {
-        return nhaSanXuat;
-    }
-
-    public void setNhaSanXuat(String nhaSanXuat) {
-        this.nhaSanXuat = nhaSanXuat;
-    }
     
+    @Override
+    public String toString() {
+        return id + " - " + name + "(" + quantity + "pcs)";
+    }
+   
 }

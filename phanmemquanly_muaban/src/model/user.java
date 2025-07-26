@@ -4,11 +4,9 @@ public class user {
     private String username;
     private String password;
     private Role role;
+    
+    public user(){}
 
-    public enum Role{
-        ADMIN,
-        STAFF
-    }
     public user(String username, String password, Role role) {
         this.username = username;
         this.password = password;
@@ -40,19 +38,10 @@ public class user {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if(this == obj) return true;
-        if(!(obj instanceof user)) return false;
-        
-        user other = (user) obj;
-        return this.username.equals(other.username);
-    }
-
-    @Override
     public String toString() {
-            return "User{" +
-                    "username='" + username + '\'' +
-                    ", role=" + role +
-                    '}';
-    }
+        return "User{" +
+                "username='" + username + '\'' + 
+                ", role = " + role + 
+                '}';
+    }  
 }

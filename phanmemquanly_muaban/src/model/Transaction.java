@@ -11,6 +11,10 @@ import java.time.LocalDate;
  * @author Phuong Nam
  */
 public class Transaction {
+
+    static double getTotalPrice(T value) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 	public enum Type {
 		dangnhap,
 		dangxuat
