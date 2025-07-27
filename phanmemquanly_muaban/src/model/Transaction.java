@@ -1,20 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author Phuong Nam
- */
 public class Transaction {
 
-    static double getTotalPrice(T value) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 	public enum Type {
 		dangnhap,
 		dangxuat
@@ -22,12 +11,14 @@ public class Transaction {
 
 	private String sanpham;
 	private int soluong;
+	private double gia; 
 	private LocalDate time;
 	private Type type;
 
-	public Transaction(String sanpham, int soluong, LocalDate time, Type type) {
+	public Transaction(String sanpham, int soluong, double gia, LocalDate time, Type type) {
 		this.sanpham = sanpham;
 		this.soluong = soluong;
+		this.gia = gia;
 		this.time = time;
 		this.type = type;
 	}
@@ -48,6 +39,14 @@ public class Transaction {
 		this.soluong = soluong;
 	}
 
+	public double getGia() {
+		return gia;
+	}
+
+	public void setGia(double gia) {
+		this.gia = gia;
+	}
+
 	public LocalDate getTime() {
 		return time;
 	}
@@ -64,8 +63,18 @@ public class Transaction {
 		this.type = type;
 	}
 
-    @Override
-    public String toString() {
-        return "Transaction{" + "sanpham=" + sanpham + ", soluong=" + soluong + ", time=" + time + ", type=" + type + '}';
-    }
+	public double getTotalPrice() {
+            return soluong * gia;
+	}
+
+	@Override
+	public String toString() {
+		return "Transaction{" +
+				"sanpham='" + sanpham + '\'' +
+				", soluong=" + soluong +
+				", gia=" + gia +
+				", time=" + time +
+				", type=" + type +
+				'}';
+	}
 }
