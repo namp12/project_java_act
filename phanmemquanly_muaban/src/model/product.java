@@ -10,7 +10,7 @@ import java.time.LocalDate;
  *
  * @author Phuong Nam
  */
-public class product {
+public class Product {
    private String id;
    private String name;
    private double price;
@@ -19,10 +19,10 @@ public class product {
    private int quantity;
    private Supplier supplier;
 
-    public product() {
+    public Product() {
     }
 
-    public product(String id, String name, double price, LocalDate NSX, LocalDate HSD, int quantity, Supplier supplier) {
+    public Product(String id, String name, double price, LocalDate NSX, LocalDate HSD, int quantity, Supplier supplier) {
         this.id = id;
         this.name = name;
         this.price = price;
