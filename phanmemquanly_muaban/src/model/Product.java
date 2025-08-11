@@ -19,10 +19,10 @@ public class product {
    private int quantity;
    private Supplier supplier;
 
-    public product() {
+    public Product() {
     }
 
-    public product(String id, String name, double price, LocalDate NSX, LocalDate HSD, int quantity, Supplier supplier) {
+    public Product(String id, String name, double price, LocalDate NSX, LocalDate HSD, int quantity, Supplier supplier) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -88,10 +88,17 @@ public class product {
         this.supplier = supplier;
     }
 
-    
-    @Override
-    public String toString() {
-        return id + " - " + name + "(" + quantity + "pcs)";
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "product{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", NSX=" + NSX +
+                ", HSD=" + HSD +
+                ", quantity=" + quantity +
+                ", supplier=" + supplier +
+                '}';
     }
-   
 }

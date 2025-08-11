@@ -1,43 +1,42 @@
 package model;
 
+import java.util.Date;
 import java.util.List;
 
 public class Invoice {
-    private String id;
-    private List<Transaction> items;
+    private String invoiceId;
+    private List<Product> productList;
     private double totalAmount;
+    private Date issueDate;
+    private User issuedBy;  // Người lập hóa đơn
+    private String customerName;  // Tên khách hàng
 
     public Invoice() {
     }
 
-    public Invoice(String id, List<Transaction> items) {
-        this.id = id;
-        this.items = items;
-        this.totalAmount = calculateTotal();
+    public Invoice(String invoiceId, List<Product> productList, double totalAmount, Date issueDate, User issuedBy, String customerName) {
+        this.invoiceId = invoiceId;
+        this.productList = productList;
+        this.totalAmount = totalAmount;
+        this.issueDate = issueDate;
+        this.issuedBy = issuedBy;
+        this.customerName = customerName;
     }
 
-    private double calculateTotal() {
-        if (items == null) return 0;
-        return items.stream()
-                .mapToDouble(Transaction::getTotalPrice)
-                .sum();
+    public String getInvoiceId() {
+        return invoiceId;
     }
 
-    public String getId() {
-        return id;
+    public void setInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public List<Product> getProductList() {
+        return productList;
     }
 
-    public List<Transaction> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Transaction> items) {
-        this.items = items;
-        this.totalAmount = calculateTotal();
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 
     public double getTotalAmount() {
@@ -48,8 +47,39 @@ public class Invoice {
         this.totalAmount = totalAmount;
     }
 
+    public Date getIssueDate() {
+        return issueDate;
+    }
+
+    public void setIssueDate(Date issueDate) {
+        this.issueDate = issueDate;
+    }
+
+    public User getIssuedBy() {
+        return issuedBy;
+    }
+
+    public void setIssuedBy(User issuedBy) {
+        this.issuedBy = issuedBy;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
     @Override
     public String toString() {
-        return "Invoice " + id + " - Total: " + totalAmount + " (" + (items != null ? items.size() : 0) + " items)";
+        return "Invoice{" +
+                "invoiceId='" + invoiceId + '\'' +
+                ", productList=" + productList +
+                ", totalAmount=" + totalAmount +
+                ", issueDate=" + issueDate +
+                ", issuedBy=" + issuedBy +
+                ", customerName='" + customerName + '\'' +
+                '}';
     }
 }

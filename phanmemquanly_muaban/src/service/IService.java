@@ -8,6 +8,6 @@ package service;
  *
  * @author Phuong Nam
  */
-public interface IService {
+public interface
     
 }

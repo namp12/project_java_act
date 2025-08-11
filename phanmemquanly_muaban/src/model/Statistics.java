@@ -1,26 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-import java.util.Map;
+import java.util.Date;
 
-/**
- *
- * @author Phuong Nam
- */
 public class Statistics {
+    private Date startDate;
+    private Date endDate;
+    private int totalTransactions;
     private double totalRevenue;
     private int totalProductsSold;
-    private Map<String, Integer> productSalesCount; // productName → quantity sold
 
-    public Statistics() {}
+    public Statistics() {
+    }
 
-    public Statistics(double totalRevenue, int totalProductsSold, Map<String, Integer> productSalesCount) {
+    public Statistics(Date startDate, Date endDate, int totalTransactions, double totalRevenue, int totalProductsSold) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.totalTransactions = totalTransactions;
         this.totalRevenue = totalRevenue;
         this.totalProductsSold = totalProductsSold;
-        this.productSalesCount = productSalesCount;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public int getTotalTransactions() {
+        return totalTransactions;
+    }
+
+    public void setTotalTransactions(int totalTransactions) {
+        this.totalTransactions = totalTransactions;
     }
 
     public double getTotalRevenue() {
@@ -39,17 +60,14 @@ public class Statistics {
         this.totalProductsSold = totalProductsSold;
     }
 
-    public Map<String, Integer> getProductSalesCount() {
-        return productSalesCount;
-    }
-
-    public void setProductSalesCount(Map<String, Integer> productSalesCount) {
-        this.productSalesCount = productSalesCount;
-    }
-    
-    
     @Override
     public String toString() {
-        return "Doanh thu: " + totalRevenue + " | Sản phẩm bán: " + totalProductsSold;
+        return "Statistics{" +
+                "startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", totalTransactions=" + totalTransactions +
+                ", totalRevenue=" + totalRevenue +
+                ", totalProductsSold=" + totalProductsSold +
+                '}';
     }
 }

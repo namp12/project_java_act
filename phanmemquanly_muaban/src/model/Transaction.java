@@ -1,80 +1,74 @@
 package model;
 
-import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
 
 public class Transaction {
+    private String transactionId;
+    private List<Product> productList;
+    private double totalAmount;
+    private Date transactionDate;
+    private User createdBy;  // Người thực hiện giao dịch
 
-	public enum Type {
-		dangnhap,
-		dangxuat
-	}
+    public Transaction() {
+    }
 
-	private String sanpham;
-	private int soluong;
-	private double gia; 
-	private LocalDate time;
-	private Type type;
+    public Transaction(String transactionId, List<Product> productList, double totalAmount, Date transactionDate, User createdBy) {
+        this.transactionId = transactionId;
+        this.productList = productList;
+        this.totalAmount = totalAmount;
+        this.transactionDate = transactionDate;
+        this.createdBy = createdBy;
+    }
 
-	public Transaction(String sanpham, int soluong, double gia, LocalDate time, Type type) {
-		this.sanpham = sanpham;
-		this.soluong = soluong;
-		this.gia = gia;
-		this.time = time;
-		this.type = type;
-	}
+    public String getTransactionId() {
+        return transactionId;
+    }
 
-	public String getSanpham() {
-		return sanpham;
-	}
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
 
-	public void setSanpham(String sanpham) {
-		this.sanpham = sanpham;
-	}
+    public List<Product> getProductList() {
+        return productList;
+    }
 
-	public int getSoluong() {
-		return soluong;
-	}
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
 
-	public void setSoluong(int soluong) {
-		this.soluong = soluong;
-	}
+    public double getTotalAmount() {
+        return totalAmount;
+    }
 
-	public double getGia() {
-		return gia;
-	}
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
 
-	public void setGia(double gia) {
-		this.gia = gia;
-	}
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
 
-	public LocalDate getTime() {
-		return time;
-	}
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
+    }
 
-	public void setTime(LocalDate time) {
-		this.time = time;
-	}
+    public User getCreatedBy() {
+        return createdBy;
+    }
 
-	public Type getType() {
-		return type;
-	}
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
 
-	public void setType(Type type) {
-		this.type = type;
-	}
-
-	public double getTotalPrice() {
-            return soluong * gia;
-	}
-
-	@Override
-	public String toString() {
-		return "Transaction{" +
-				"sanpham='" + sanpham + '\'' +
-				", soluong=" + soluong +
-				", gia=" + gia +
-				", time=" + time +
-				", type=" + type +
-				'}';
-	}
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId='" + transactionId + '\'' +
+                ", productList=" + productList +
+                ", totalAmount=" + totalAmount +
+                ", transactionDate=" + transactionDate +
+                ", createdBy=" + createdBy +
+                '}';
+    }
 }

@@ -9,9 +9,9 @@ package model;
  * @author Phuong Nam
  */
 public enum Role {
-    ADMIN("Quản Trị Viên", 3),
-    STAFF("Nhân Viên", 2),
-    VIEWER("Người Dùng", 1);
+    ADMIN("ADMIN", 3),
+    STAFF("STAFF", 2),
+    VIEWER("VIEWER", 1);
 
     private final String description;
     private final int level;
@@ -28,16 +28,12 @@ public enum Role {
     public int getLevel() {
         return level;
     }
-    public static Role fromSting(String name){
-        try{
-            return Role.valueOf(name.toUpperCase());
-        }catch(IllegalArgumentException e){
-            return VIEWER;
-        }
-    }
-    @Override
-    public String toString() {
-        return name() + "(" + description + ")";
-    }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Role{" +
+                "description='" + description + '\'' +
+                ", level=" + level +
+                '}';
+    }
 }
