@@ -10,7 +10,7 @@ import java.time.LocalDate;
  *
  * @author Phuong Nam
  */
-public class product {
+public class Product {
    private String id;
    private String name;
    private double price;
